@@ -20,8 +20,6 @@ def floyd_warshal(edges, n) :
             for i in range(n):
                 for j in range(n):
                     # Update shortest path from i to j through k
-                    graph[i][j] = min(
-                        graph[i][j],
-                        graph[i][k] + graph[k][j])
+                    graph[i][j] = min(graph[i][j], graph[i][k] + graph[k][j])
     
     return graph
